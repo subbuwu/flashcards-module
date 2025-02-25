@@ -16,7 +16,7 @@ export const FlashcardControls = () => {
           onClick={markAsLearnt}
           className="flex-1 py-3 px-4 rounded-lg border border-purple-200 text-purple-600 font-medium"
         >
-          Didn't Know
+          Did not Know
         </button>
         <button 
           onClick={markAsSkipped}

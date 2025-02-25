@@ -4,14 +4,11 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Switch } from '@/components/ui/switch';
 import { Button } from '@/components/ui/button';
+import { FlashcardSettings, mockFlashcardSettings } from '@/lib/flashcardsettings';
 
-export const mockFlashcardSettings = {
-  shuffleCards: true,
-  repeatAfter: 4, // in cards
-};
 
 export default function StudySettingsPage() {
-  const [settings, setSettings] = useState(mockFlashcardSettings);
+  const [settings, setSettings] = useState<FlashcardSettings>(mockFlashcardSettings);
   const router = useRouter();
 
   return (

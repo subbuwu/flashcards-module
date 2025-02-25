@@ -6,6 +6,7 @@ import { useState, useCallback, ReactNode } from 'react';
 
 export const FlashcardProvider = ({ children , deckId }: { children: ReactNode , deckId: string }) => {
   
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [deck, setDeck] = useState(() => {
     const foundDeck = mockFlashcards.decks.find(d => d.id === deckId);
     const deckData = foundDeck || mockFlashcards.decks[0];
@@ -35,7 +36,8 @@ export const FlashcardProvider = ({ children , deckId }: { children: ReactNode ,
     setIsFlipped(false);
   }, [deck]);
 
-  const updateCardStatus = useCallback((status: 'learnt' | 'skipped' | 'knew') => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const updateCardStatus = useCallback((_status: 'learnt' | 'skipped' | 'knew') => {
     if (!deck || !currentCard) return;
     // Update card stats logic here
     nextCard();

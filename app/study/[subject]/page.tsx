@@ -5,9 +5,9 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { mockStudySections } from '@/data/mockData';
 
-export default function StudySubjectPage({ params }: { params: { subject: string } }) {
+export default function StudySubjectPage() {
   const [selectedSubsections, setSelectedSubsections] = useState<string[]>([]);
-  const [selectedStudyOption, setSelectedStudyOption] = useState<string>("all-cards");
+
   const [selectedNoOfCards, setSelectedNoOfCards] = useState<number>(0);
   const router = useRouter();
   
