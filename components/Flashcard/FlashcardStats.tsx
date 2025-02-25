@@ -7,7 +7,7 @@ export const FlashcardStats = () => {
   if (!currentCard) return null;
 
   return (
-    <div className="flex justify-between border-b py-4 mb-6">
+    <div className="flex justify-between border-b py-4 mb-6 px-4">
       <div className="text-center flex-1">
         <div className="text-2xl font-bold">{currentCard.stats.learnt}</div>
         <div className="text-sm text-gray-600">Learnt</div>

@@ -7,7 +7,7 @@ export const FlashcardCard = () => {
   if (!currentCard) return null;
 
   return (
-    <div className="lg:max-w-xl mx-auto w-full mb-6">
+    <div className="lg:max-w-xl mx-auto w-full mb-6 px-4">
       <AnimatePresence mode="wait">
         <motion.div
           key={isFlipped ? 'back' : 'front'}
@@ -15,14 +15,14 @@ export const FlashcardCard = () => {
           animate={{ rotateY: 0 }}
           exit={{ rotateY: -90 }}
           transition={{ duration: 0.3 }}
-          className="w-full aspect-[4/3] rounded-xl shadow-xl shadow-purple-300 bg-purple-600 text-white p-4 flex flex-col"
+          className={`w-full aspect-[4/3] rounded-xl shadow-xl shadow-purple-300 border p-4 flex flex-col ${!isFlipped ? "bg-purple-600   text-white" : "bg-[#FFFFFF] border-[#D6BBFB]"} text-black `}
           onClick={() => setIsFlipped(!isFlipped)}
         >
-          <div className="text-lg font-medium mb-2">
+          <div className="text-lg font-medium mb-4">
             {isFlipped ? 'Answer' : 'Prompt'}
           </div>
-          <div className="flex-grow flex items-center justify-center text-center">
-            <h3 className="text-2xl font-medium">
+          <div className={` ${isFlipped ? "text-sm" : "text-lg"} flex items-center justify-center  `}>
+            <h3 className={` ${isFlipped ? "font-normal text-justify " : "font-medium text-center mt-6"} `}>
               {isFlipped ? currentCard.answer : currentCard.prompt}
             </h3>
           </div>

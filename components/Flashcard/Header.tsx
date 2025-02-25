@@ -6,7 +6,7 @@ export const FlashcardHeader = () => {
     if (!deck || currentCard === null) return null;
     
     return (
-      <div className="flex justify-between items-center py-3 border-b mb-4">
+      <div className="flex justify-between items-center py-3 border-b mb-4 px-4">
         <div className="flex items-center">
           <button className="mr-2">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
