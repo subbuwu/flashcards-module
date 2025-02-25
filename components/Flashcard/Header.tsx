@@ -13,7 +13,7 @@ export const FlashcardHeader = () => {
               <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
-          <span className="font-medium">Card {currentCard?.id + 1}/{deck.cards.length}</span>
+          <span className="font-medium">{currentCard?.id}/{deck.cards.length}</span>
         </div>
         <div className="flex gap-4">
           <button>
