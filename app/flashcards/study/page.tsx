@@ -11,10 +11,6 @@ export default function FlashcardPage() {
   const params = useParams();
   const deckId = params?.deckId as string;
 
-  if (!deckId) {
-    return <p>Loading...</p>; // Handle case when params are not yet available
-  }
-
   return (
     <FlashcardProvider deckId={deckId}>
       <div className="container mx-auto px-4 py-8">
